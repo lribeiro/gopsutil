@@ -114,7 +114,7 @@ func InfoWithContext(ctx context.Context) ([]InfoStat, error) {
 	var ret []InfoStat
 	var dst []Win32_ProcessorWithoutLoadPct
 	q := wmi.CreateQuery(&dst, "")
-	q = strings.ReplaceAll(q, "Win32_ProcessorWithoutLoadPct", "Win32_Processor")
+	q = strings.Replace(q, "Win32_ProcessorWithoutLoadPct", "Win32_Processor",1)
 	if err := common.WMIQueryWithContext(ctx, q, &dst); err != nil {
 		return ret, err
 	}
@@ -253,7 +253,7 @@ func CountsWithContext(ctx context.Context, logical bool) (int, error) {
 	// for the time being, try with unreliable and slow WMI call…
 	var dst []Win32_ProcessorWithoutLoadPct
 	q := wmi.CreateQuery(&dst, "")
-	q = strings.ReplaceAll(q, "Win32_ProcessorWithoutLoadPct", "Win32_Processor")
+	q = strings.Replace(q, "Win32_ProcessorWithoutLoadPct", "Win32_Processor",-1)
 	if err := common.WMIQueryWithContext(ctx, q, &dst); err != nil {
 		return 0, err
 	}
