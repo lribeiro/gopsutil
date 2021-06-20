@@ -1,6 +1,8 @@
 gopsutil: psutil for golang
 ==============================
 
+*NOTE* : This fork will focus on keeping go1.10.8 compatibility, which should work with windows_xp
+
 
 .. image:: https://github.com/lribeiro/gopsutil/workflows/Test/badge.svg
         :target: https://github.com/lribeiro/gopsutil/actions?query=workflow%3ATest
