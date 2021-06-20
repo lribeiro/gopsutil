@@ -5,8 +5,8 @@ package docker
 import (
 	"context"
 
-	cpu "github.com/shirou/gopsutil/cpu"
-	"github.com/shirou/gopsutil/internal/common"
+	cpu "github.com/lribeiro/gopsutil/cpu"
+	"github.com/lribeiro/gopsutil/internal/common"
 )
 
 // GetDockerStat returns a list of Docker basic stats.

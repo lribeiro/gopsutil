@@ -6,11 +6,12 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/shirou/gopsutil/internal/common"
 	"os/exec"
 	"regexp"
 	"strconv"
 	"strings"
+
+	"github.com/lribeiro/gopsutil/internal/common"
 )
 
 var (

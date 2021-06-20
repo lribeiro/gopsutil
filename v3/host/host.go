@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/shirou/gopsutil/v3/internal/common"
+	"github.com/lribeiro/gopsutil/v3/internal/common"
 )
 
 var invoke common.Invoker = common.Invoke{}

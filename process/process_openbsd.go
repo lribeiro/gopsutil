@@ -11,10 +11,10 @@ import (
 	"strings"
 	"unsafe"
 
-	cpu "github.com/shirou/gopsutil/cpu"
-	"github.com/shirou/gopsutil/internal/common"
-	mem "github.com/shirou/gopsutil/mem"
-	net "github.com/shirou/gopsutil/net"
+	cpu "github.com/lribeiro/gopsutil/cpu"
+	"github.com/lribeiro/gopsutil/internal/common"
+	mem "github.com/lribeiro/gopsutil/mem"
+	net "github.com/lribeiro/gopsutil/net"
 	"golang.org/x/sys/unix"
 )
 
@@ -132,7 +132,7 @@ func (p *Process) StatusWithContext(ctx context.Context) (string, error) {
 }
 
 func (p *Process) ForegroundWithContext(ctx context.Context) (bool, error) {
-	// see https://github.com/shirou/gopsutil/issues/596#issuecomment-432707831 for implementation details
+	// see https://github.com/lribeiro/gopsutil/issues/596#issuecomment-432707831 for implementation details
 	pid := p.Pid
 	ps, err := exec.LookPath("ps")
 	if err != nil {

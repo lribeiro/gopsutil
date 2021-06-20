@@ -12,7 +12,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/shirou/gopsutil/v3/internal/common"
+	"github.com/lribeiro/gopsutil/v3/internal/common"
 	"golang.org/x/sys/unix"
 )
 
@@ -80,7 +80,7 @@ func isMount(path string) bool {
 	if err != nil {
 		return false
 	}
-	if fileInfo.Mode() & os.ModeSymlink != 0 {
+	if fileInfo.Mode()&os.ModeSymlink != 0 {
 		return false
 	}
 	var stat1 unix.Stat_t

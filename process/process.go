@@ -10,10 +10,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/shirou/gopsutil/cpu"
-	"github.com/shirou/gopsutil/internal/common"
-	"github.com/shirou/gopsutil/mem"
-	"github.com/shirou/gopsutil/net"
+	"github.com/lribeiro/gopsutil/cpu"
+	"github.com/lribeiro/gopsutil/internal/common"
+	"github.com/lribeiro/gopsutil/mem"
+	"github.com/lribeiro/gopsutil/net"
 )
 
 var (

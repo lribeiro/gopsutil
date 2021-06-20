@@ -6,7 +6,7 @@ import (
 	"context"
 	"runtime"
 
-	"github.com/shirou/gopsutil/internal/common"
+	"github.com/lribeiro/gopsutil/internal/common"
 )
 
 func Times(percpu bool) ([]TimesStat, error) {

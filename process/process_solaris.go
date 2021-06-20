@@ -8,9 +8,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/shirou/gopsutil/cpu"
-	"github.com/shirou/gopsutil/internal/common"
-	"github.com/shirou/gopsutil/net"
+	"github.com/lribeiro/gopsutil/cpu"
+	"github.com/lribeiro/gopsutil/internal/common"
+	"github.com/lribeiro/gopsutil/net"
 )
 
 type MemoryMapsStat struct {
@@ -191,7 +191,7 @@ func (p *Process) ConnectionsMaxWithContext(ctx context.Context, max int) ([]net
 }
 
 func (p *Process) NetIOCountersWithContext(ctx context.Context, pernic bool) ([]net.IOCountersStat, error) {
-       return nil, common.ErrNotImplementedError
+	return nil, common.ErrNotImplementedError
 }
 
 func (p *Process) MemoryMapsWithContext(ctx context.Context, grouped bool) (*[]MemoryMapsStat, error) {
